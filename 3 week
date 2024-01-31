@@ -1,0 +1,143 @@
+3c
+To create a dashboard in Tableau on detailed profit based on category and its relevant subcategory in each region using the Sample Superstore dataset, follow these steps:
+
+1. **Connect to Sample Superstore:**
+   - Open Tableau and connect to the Sample Superstore dataset.
+
+2. **Create a Bar Chart:**
+   - Drag the `[Category]` field to the Columns shelf.
+   - Drag the `[Sub-Category]` field to the Color Marks card.
+   - Drag the `[Profit]` field to the Rows shelf and choose "SUM(Profit)".
+
+3. **Include Region in the Analysis:**
+   - Drag the `[Region]` field to the Columns shelf before `[Category]`. This will create separate bars for each category within each region.
+
+4. **Adjust Marks and Labels:**
+   - Customize the marks on the bar chart. You can adjust the color, size, and labels for better visualization.
+
+5. **Create a Dashboard:**
+   - Click on the "New Dashboard" tab at the bottom of the Tableau window.
+   - Drag the bar chart worksheet onto the dashboard.
+
+6. **Add Filter for Sub-Category:**
+   - Drag the `[Sub-Category]` field to the Filters shelf and choose the relevant subcategories you want to include in the visualization.
+
+7. **Include Titles and Captions:**
+   - Add titles to the dashboard and the worksheet.
+   - Include captions to provide additional context if needed.
+
+8. **Format and Customize:**
+   - Adjust the size, layout, and formatting of the dashboard.
+   - Customize tooltips to display relevant information.
+
+9. **Save and Share:**
+   - Save your Tableau workbook and share it as needed.
+
+By following these steps, you'll create a Tableau dashboard displaying detailed profit based on category and its relevant subcategory in each region using the Sample Superstore dataset. Adjust the visualization based on your preferences and the insights you want to convey.
+
+3a
+
+In Tableau, you can calculate the correlation between Quantity and Discount Percentage using the built-in correlation function. Here's a step-by-step guide:
+
+1. **Connect to Data Source:**
+   - Import the "Sample Superstore" dataset into Tableau.
+
+2. **Create a Scatter Plot:**
+   - Drag the "Quantity" field to the Columns shelf.
+   - Drag the "Discount" field to the Rows shelf.
+   - Tableau will automatically create a scatter plot.
+
+3. **Calculate Correlation:**
+   - In the Data pane, right-click on an empty space, then select "Create Calculated Field."
+   - Name the calculated field (e.g., "Correlation") and use the following formula:
+     ```
+     CORR([Quantity], [Discount])
+     ```
+   - Click OK.
+
+4. **Display Correlation on the Scatter Plot:**
+   - Drag the newly created "Correlation" field to the Label shelf in the scatter plot.
+
+5. **Format and Customize:**
+   - Format the scatter plot as needed (titles, axis labels, etc.).
+   - You can also add additional filters or parameters for interactivity.
+
+6. **Test and Refine:**
+   - Test the dashboard to ensure the correlation is displayed correctly.
+   - Refine the visualization based on your preferences and user feedback.
+
+By following these steps, you'll have a Tableau dashboard displaying the correlation between Quantity and Discount Percentage.
+
+3b
+
+To create a Tableau dashboard showing revenue based on the month of the year, follow these steps:
+
+1. **Connect to Data Source:**
+   - Import the "Sample Superstore" dataset into Tableau.
+
+2. **Create a Date Field:**
+   - If you don't already have a Date field, create one by dragging the "Order Date" or relevant date field to the Columns shelf. Right-click on it, choose "Exact Date," and then select "Month/Year" or a similar option.
+
+3. **Create a Revenue Calculation:**
+   - In the Data pane, right-click on an empty space, then select "Create Calculated Field."
+   - Name the calculated field (e.g., "Revenue") and use the following formula:
+     ```
+     SUM([Sales])
+     ```
+   - Click OK.
+
+4. **Build the Time Series Chart:**
+   - Drag the newly created "Revenue" field to the Rows shelf.
+   - Tableau should automatically aggregate the revenue by the chosen date granularity (month).
+
+5. **Format the Time Axis:**
+   - Right-click on the date axis, select "Format," and choose the desired date format (e.g., Month/Year).
+
+6. **Customize the Chart:**
+   - Format the chart as needed, add titles, axis labels, etc.
+
+7. **Test and Refine:**
+   - Test the dashboard to ensure it accurately displays revenue based on the month of the year.
+   - Refine the visualization based on your preferences and user feedback.
+
+By following these steps, you'll have a Tableau dashboard showing revenue trends across different months of the year.
+3d
+To create interactive filters for region and year on a Tableau dashboard, follow these steps:
+
+1. **Drag Region and Year to Filters Shelf:**
+   - Drag the "Region" field to the Filters shelf.
+   - Drag the "Year" field to the Filters shelf.
+
+2. **Configure Region Filter:**
+   - For the Region filter, choose the regions you want to include or leave all regions selected.
+   - You can customize the filter type (single value, multiple values, etc.) based on your preference.
+
+3. **Configure Year Filter:**
+   - For the Year filter, choose the years you want to include or leave all years selected.
+   - Similar to the Region filter, customize the filter type as needed.
+
+4. **Apply Filters to Relevant Sheets:**
+   - Ensure that you've applied the filters to the relevant sheets on your dashboard.
+   - Right-click on the filters on the Filters shelf and select "Apply to Worksheets" to specify which sheets these filters affect.
+
+5. **Create Dashboard:**
+   - Go to the Dashboard tab in Tableau.
+   - Drag the sheets displaying your visualizations to the dashboard.
+
+6. **Arrange and Size:**
+   - Arrange the sheets on the dashboard as desired.
+   - Adjust the size of the filters to make them user-friendly.
+
+7. **Test Interactivity:**
+   - Test the dashboard to ensure that when you select a region or year in the filters, the visualizations on the dashboard update accordingly.
+
+8. **Add Titles and Instructions:**
+   - Add clear titles to the filters and provide instructions if necessary, guiding users on how to interact with the dashboard.
+
+9. **Refine and Format:**
+   - Refine the layout, formatting, and any additional elements to enhance the overall appearance and user experience.
+
+10. **Save and Share:**
+    - Save your Tableau workbook and share it with others.
+
+Following these steps will allow you to create an interactive Tableau dashboard with filters for region and year. Users can dynamically explore the data based on their selections in these filters.
